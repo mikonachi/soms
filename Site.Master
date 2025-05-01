@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SOMS.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%: Page.Title %></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- Navbar Content Placeholder -->
+        <asp:ContentPlaceHolder ID="NavContentAdmin" runat="server">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background: #90ee90">
+                <div class="container-fluid">
+                    <!-- Left side: Logo and App Name -->
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="Images/cvsulogo.png" alt="Logo" style="width: 40px; height: 35px; margin-right: 20px;">
+                        <span style="font-weight:bold">OMS</span>
+                    </a>
+
+                    <!-- Right side: Navigation items and Login button -->
+                    <div class="ms-auto d-flex align-items-center">
+                        <ul class="navbar-nav d-flex flex-row align-items-center">
+                            <li class="nav-item me-5">
+                                <!-- Increased margin here -->
+                                <a class="nav-link fs-5" href="Calendar.aspx" style="font-weight:bold">EventCalendar</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <!-- Increased margin here -->
+                                <a class="nav-link fs-5" href="#" style="font-weight:bold">Proposal Tracking</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <!-- Increased margin here -->
+                                <a class="nav-link fs-5" href="#" style="font-weight: bold">Groups</a>
+                            </li>
+                            <li>
+                                <a class="px-4 py-2 fs-6" href="Settings.aspx">
+                                    <i class="fas fa-cog" style="font-weight: bold; color: white; height: 10px"></i>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+        </asp:ContentPlaceHolder>
+
+        <!-- Main Content Placeholder -->
+        <div class="container mt-4 pt-5">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+
+    </form>
+</body>
+</html>
